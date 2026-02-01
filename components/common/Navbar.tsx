@@ -3,7 +3,7 @@ import Container from "../Container";
 import Image from "next/image";
 import { navbarConfig } from "@/config/Navbar";
 import { ThemeToggle } from "./ThemeSwitch";
-import { ThemeProvider } from "./ThemeProvider";
+
 
 export default function Navbar() {
     return (
