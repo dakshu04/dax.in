@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Container from "../Container";
+import Container from "../common/Container";
 import { Button } from "../ui/button";
 import SectionHeading from "../common/SectionHeading";
 import { ProjectList } from "../projects/ProjectList";

@@ -5,7 +5,7 @@ import React from 'react';
 
 import SectionHeading from '../common/SectionHeading';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
-import Container from '../Container';
+import Container from '../common/Container';
 
 export default function About() {
   return (

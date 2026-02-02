@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import { Button } from '../ui/button';
-import Container from '../Container';
+import Container from '../common/Container';
 import { GithubIcon } from 'lucide-react';
 
 const ActivityCalendar = dynamic(

@@ -1,7 +1,7 @@
 // app/projects/page.tsx
 
 // 1. Your imports
-import Container from "@/components/Container";
+import Container from "@/components/common/Container";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { projects } from "@/config/Project";
 

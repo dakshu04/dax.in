@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Container from "../components/Container";
+import Container from "../components/common/Container";
 import Hero from "@/components/Landing/Hero";
 import Experience from "@/components/Landing/Experience";
 import Projects from "@/components/Landing/Projects";

@@ -1,5 +1,5 @@
 import { heroConfig, skillComponents, socialLinks } from "@/config/Hero";
-import Container from "../Container";
+import Container from "../common/Container";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import CV from "../svg/CV";

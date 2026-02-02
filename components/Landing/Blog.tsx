@@ -1,6 +1,6 @@
 import { getPublishedBlogPosts } from "@/config/Blog";
 import SectionHeading from "../common/SectionHeading";
-import Container from "../Container";
+import Container from "../common/Container";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { BlogCard } from "../blog/BlogCard";
