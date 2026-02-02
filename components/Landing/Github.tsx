@@ -36,9 +36,16 @@ type GitHubContributionResponse = {
   contributionLevel: 'NONE' | 'FIRST_QUARTILE' | 'SECOND_QUARTILE' | 'THIRD_QUARTILE' | 'FOURTH_QUARTILE';
 };
 
-// Fixed Dynamic Import to handle Module/Default export conflicts
-const ActivityCalendar = dynamic(
-  () => import('react-activity-calendar').then((mod) => (mod.default || mod) as ComponentType<ActivityCalendarProps>),
+/**
+ * FIXED DYNAMIC IMPORT:
+ * Using a direct casting approach to resolve the 'Property default does not exist' error.
+ */
+const ActivityCalendar = dynamic<ActivityCalendarProps>(
+  () => import('react-activity-calendar').then((mod) => {
+    // This handles both ESM and CJS export styles safely for the TS compiler
+    const Component = (mod as any).default || mod;
+    return Component as ComponentType<ActivityCalendarProps>;
+  }),
   { 
     ssr: false,
     loading: () => <div className="h-[160px] w-full animate-pulse bg-muted/20 rounded-lg" />
@@ -53,6 +60,7 @@ export default function GithubActivity() {
   const [hasError, setHasError] = useState(false);
   const { resolvedTheme } = useTheme();
 
+  // Hydration Shield: Ensures component only renders on client to prevent theme/date mismatches
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -82,6 +90,7 @@ export default function GithubActivity() {
             }));
 
           if (validData.length > 0) {
+            // Typed reduce parameters to satisfy strict TypeScript requirements
             const total = validData.reduce((sum: number, item: ContributionItem) => sum + item.count, 0);
             setTotalContributions(total);
 
@@ -93,6 +102,7 @@ export default function GithubActivity() {
           }
         }
       } catch (err) {
+        console.error('GitHub API Error:', err);
         setHasError(true);
       } finally {
         setIsLoading(false);
@@ -101,7 +111,11 @@ export default function GithubActivity() {
     fetchData();
   }, [mounted]);
 
-  if (!mounted) return <Container className="mt-20"><div className="h-[200px] w-full animate-pulse rounded-xl bg-muted/10" /></Container>;
+  if (!mounted) return (
+    <Container className="mt-20">
+      <div className="h-[200px] w-full animate-pulse rounded-xl bg-muted/10" />
+    </Container>
+  );
 
   return (
     <Container className="mt-20">
@@ -109,7 +123,7 @@ export default function GithubActivity() {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-foreground text-2xl font-bold">{githubConfig.title}</h2>
-            <p className="text-muted-foreground text-sm"><b>{githubConfig.username}</b>'s {githubConfig.subtitle}</p>
+            <p className="text-muted-foreground text-sm"><b>{githubConfig.username}</b>s {githubConfig.subtitle}</p>
             {!isLoading && !hasError && (
               <p className="text-primary mt-1 text-sm font-medium">
                 Total: <span className="font-black">{totalContributions.toLocaleString()}</span> contributions
@@ -119,20 +133,30 @@ export default function GithubActivity() {
         </div>
 
         {isLoading ? (
-          <div className="flex items-center justify-center py-16"><div className="border-primary h-8 w-8 animate-spin rounded-full border-2 border-t-transparent" /></div>
+          <div className="flex items-center justify-center py-16">
+            <div className="border-primary h-8 w-8 animate-spin rounded-full border-2 border-t-transparent" />
+          </div>
         ) : hasError ? (
           <div className="border-border rounded-xl border-2 border-dashed p-8 text-center">
             <GithubIcon className="mx-auto mb-4 h-8 w-8 text-muted-foreground" />
-            <Button variant="outline" asChild><Link href={`https://github.com/${githubConfig.username}`}>{githubConfig.errorState.buttonText}</Link></Button>
+            <p className="mb-2 font-medium">{githubConfig.errorState.title}</p>
+            <Button variant="outline" asChild>
+              <Link href={`https://github.com/${githubConfig.username}`}>
+                {githubConfig.errorState.buttonText}
+              </Link>
+            </Button>
           </div>
         ) : (
           <div className="bg-background/50 relative rounded-lg border border-dashed border-black/20 p-6 backdrop-blur-sm dark:border-white/10">
             <div className="w-full overflow-x-auto">
+              {/* Responsive container for mobile swiping */}
+              
               <ActivityCalendar
                 data={contributions}
                 blockSize={githubConfig.blockSize}
                 blockMargin={githubConfig.blockMargin}
                 fontSize={githubConfig.fontSize}
+                // ResolvedTheme provides accurate dark/light detection for system settings
                 colorScheme={(resolvedTheme === 'dark' ? 'dark' : 'light') as 'light' | 'dark'}
                 theme={githubConfig.theme}
                 labels={{ months: githubConfig.months, weekdays: githubConfig.weekdays }}
