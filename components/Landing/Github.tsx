@@ -43,8 +43,13 @@ type GitHubContributionResponse = {
  */
 const ActivityCalendar = dynamic<ActivityCalendarProps>(
   () => import('react-activity-calendar').then((mod) => {
-    // This handles both ESM and CJS export styles safely for the TS compiler
+    // 1. Grab the component regardless of how it's exported
     const Component = (mod as any).default || mod;
+    
+    // 2. Ensure we aren't returning the module object itself
+    if (Component && typeof Component === 'object' && Component.default) {
+      return Component.default as ComponentType<ActivityCalendarProps>;
+    }
     return Component as ComponentType<ActivityCalendarProps>;
   }),
   { 
