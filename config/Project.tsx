@@ -10,22 +10,20 @@ import { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     title: "SnapMod",
-    description: "A sleek, high-performance web utility for instant modifications and snapshot management, optimized for developer productivity. ",
-    image: "/projects/snapmod.png",
+    description: "A sleek, high-performance web utility for instant modifications and snapshot management, optimized for developer productivity.",
     video: "https://ik.imagekit.io/fjn46sk6v/snapmod.mp4?updatedAt=1770015457420",
-    link: "https:/snapmod.xyz",
+    image: "/projects/snapmod.png", // Ensure this path matches your public folder
+    link: "https://snapmod.xyz",
     technologies: [
-      { name: 'Next.js', icon: <NextJs key="nextjs" /> },
-      { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
       { name: 'React', icon: <ReactIcon key="react" /> },
-      { name: 'Vercel', icon: <Vercel key="vercel" /> },
+      { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
       { name: 'Tailwind CSS', icon: <TailwindCss key="tailwindcss" /> },
-      { name: 'shadcn/ui', icon: <Shadcn key="shadcn" /> },
+      { name: 'Vercel', icon: <Vercel key="vercel" /> },
     ],
-    github: "https://github.com/dakshu04/",
+    github: "https://github.com/dakshu04", // Updated to your GitHub profile
     live: "https://snapmod.xyz",
     details: true,
-    projectDetailsPageSlug: '/projects/snapmod',
+    projectDetailsPageSlug: '/projects/snapmod.png',
     isWorking: true
   },
   {
@@ -47,3 +45,4 @@ export const projects: Project[] = [
     isWorking: true
   },
 ];
+
