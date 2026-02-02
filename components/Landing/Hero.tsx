@@ -1,3 +1,4 @@
+'use client'
 import { heroConfig, skillComponents, socialLinks } from "@/config/Hero";
 import Container from "../common/Container";
 import Image from "next/image";
@@ -9,7 +10,6 @@ import { cn } from "@/lib/utils";
 import { parseTemplate } from "@/lib/Hero";
 import Skill from "../common/Skill";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
-
 const buttonIcons = {
     CV: CV,
     Chat: Chat

@@ -1,7 +1,7 @@
+'use client'
 import { about, mySkills } from '@/config/About';
 import Image from 'next/image';
 import React from 'react';
-
 
 import SectionHeading from '../common/SectionHeading';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';

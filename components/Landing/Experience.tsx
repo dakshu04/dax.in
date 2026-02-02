@@ -1,10 +1,10 @@
+'use client'
+import { Button } from "../ui/button";
 import type { Experience } from "@/config/Experience";
 import { experiences } from "@/config/Experience";
-
 import SectionHeading from "../common/SectionHeading";
 import Container from "../common/Container";
 import Link from "next/link";
-import { Button } from "../ui/button";
 import { ExperienceCard } from "../experience/ExperienceCard";
 
 export default function Experience() {

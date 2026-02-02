@@ -43,10 +43,10 @@ type GitHubContributionResponse = {
  */
 const ActivityCalendar = dynamic<ActivityCalendarProps>(
   () => import('react-activity-calendar').then((mod) => {
-    // 1. Grab the component regardless of how it's exported
+    // Check if the component is in .default (ESM) or the module itself (CJS)
     const Component = (mod as any).default || mod;
     
-    // 2. Ensure we aren't returning the module object itself
+    // Handle specific cases where it might be double-nested
     if (Component && typeof Component === 'object' && Component.default) {
       return Component.default as ComponentType<ActivityCalendarProps>;
     }
