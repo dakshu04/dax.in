@@ -30,7 +30,16 @@ export function ThemeToggle({
   className,
 }: ThemeToggleProps) {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
 
+  React.useEffect(() => {
+    setMounted(true);
+  }, [])
+// If not mounted, render a placeholder with the same dimensions
+  // to prevent the "Hydration Mismatch" error.
+  if (!mounted) {
+    return <div className="h-8 w-8" />; // Empty box with same size
+  }
   const isDark = theme === "dark";
 
   const toggleTheme = () => {

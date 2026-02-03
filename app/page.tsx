@@ -4,6 +4,7 @@ import Hero from "@/components/Landing/Hero";
 import Experience from "@/components/Landing/Experience";
 import Projects from "@/components/Landing/Projects";
 import About from "@/components/Landing/About";
+import GithubHeatmap from "@/components/Landing/GithubHeatMap";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <About />
+      <GithubHeatmap />
     </Container>
   );
 }

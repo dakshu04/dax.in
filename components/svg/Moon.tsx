@@ -9,7 +9,9 @@ export default function Moon({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="currentColor"
+      // Using fill="none" and stroke is usually safer for theme transitions,
+      // but if you want the solid look, keep currentColor and fix the parent.
+      fill="currentColor" 
       className={className}
       aria-hidden="true"
     >
