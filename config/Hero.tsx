@@ -12,12 +12,12 @@ import TailwindCss from "@/components/technology/TailwindCss"
 import TypeScript from "@/components/technology/Typescript"
 
 export const skillComponents = {
-    NextJs: NextJs,
-    Typescript: TypeScript,
-    React: React,
-    TailwindCSS: TailwindCss,
-    PostgreSQL: PostgreSQL,
-    Prisma: Prisma
+    'Next.js': NextJs,
+    'TypeScript': TypeScript,
+    'React': React,
+    'Tailwind CSS': TailwindCss,
+    'PostgreSQL': PostgreSQL,
+    'Prisma': Prisma,
 }
 
 
@@ -61,9 +61,9 @@ export const heroConfig = {
     ], 
 
     description: {
-        template: 
-        'I am Daksh, a passionate Full Stack Developer specializing in building dynamic and responsive web applications using modern technologies like {skills: 0}, {skills: 1}, and {skills: 2}. With a strong foundation in both front-end and back-end development, I create seamless user experiences and robust server-side solutions. Let us connect and build something amazing together!'
-    }, 
+        template:
+        `I am Daksh, a passionate Full Stack Developer specializing in building dynamic and responsive web applications using modern technologies like {skills:0}, {skills:1}, {skills:2}, {skills:3}, {skills:4} and {skills:5}. With a strong foundation in both front-end and back-end development, I create seamless user experiences and robust server-side solutions. Let us connect and build something amazing together!`
+    },
 
     buttons: [
         {

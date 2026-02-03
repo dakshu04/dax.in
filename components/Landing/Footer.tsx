@@ -7,8 +7,8 @@ export default function Footer() {
   const { quote, author } = quotes[0];
 
   return (
-    <Container className="py-16">
-      <div className="dark:border-dark-white-50 relative rounded-xl border px-4 py-10">
+    <Container className="py-8">
+      <div className="dark:border-dark-white-50 relative rounded-xl border px-8 py-12">
         <svg
           aria-hidden="true"
           width="105"
