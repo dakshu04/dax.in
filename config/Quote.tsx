@@ -1,6 +1,6 @@
 export const quotes = [
     {
-      quote: `Do so much volume that it would be unreasonable that you would be unsuccessful!`,
+      quote: `Do so much work that it would be unreasonable for you to not be successful.`,
       author: 'Alex Hormozi',
     },
   ];
