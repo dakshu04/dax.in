@@ -5,7 +5,7 @@ export const githubConfig = {
 
      // Chart settings
     blockSize: 11,
-    blockMargin: 1,
+    blockMargin: 1.5,
     fontSize: 14,
     maxLevel: 4,
 

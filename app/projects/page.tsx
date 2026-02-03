@@ -3,6 +3,7 @@ import { ProjectCard } from "@/components/projects/ProjectCard";
 import { projects } from "@/config/Project";
 
 export default function ProjectsPage() {
+
   return (
     <Container className="py-20">
       <h1 className="text-4xl font-bold mb-8">Projects</h1>

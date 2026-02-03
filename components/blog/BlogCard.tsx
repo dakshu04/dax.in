@@ -1,3 +1,5 @@
+'use client'
+import { Badge } from '@/components/ui/badge';
 import {
   Card,
   CardContent,
@@ -5,11 +7,10 @@ import {
   CardHeader,
 } from '@/components/ui/card';
 import { BlogPostPreview } from '@/types/blog';
-import { Link } from 'next-view-transitions';
+import { Link }  from 'next-view-transitions';
 import Image from 'next/image';
-import ArrowRight from '../svg/ArrowRight';
 import Calender from '../svg/Calendar';
-import { Badge } from '../ui/badge';
+import ArrowRight from '../svg/ArrowRight';
 
 
 

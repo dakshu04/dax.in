@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ViewTransition } from "react";
+import { ViewTransitions } from 'next-view-transitions';
 import { ThemeProvider } from "@/components/common/ThemeProvider";
 import ReactLenis from "lenis/react";
 import Navbar from "@/components/common/Navbar";
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransition>
+    <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
         <body
           className={`font-hanken-grotesk antialiased`}
@@ -45,6 +45,6 @@ export default function RootLayout({
           </ThemeProvider>
         </body>
       </html>
-      </ViewTransition>
+      </ViewTransitions>
   );
 }

@@ -15,10 +15,10 @@ export const navbarConfig = {
             label: 'Work',
             href: '/work-experience'
         },
-        {
-            label: 'Blog',
-            href: '/blogs'
-        },
+        // {
+        //     label: 'Blog',
+        //     href: '/blogs'
+        // },
         {
             label: 'Projects',
             href: '/projects'

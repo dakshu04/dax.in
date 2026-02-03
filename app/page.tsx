@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Container from "../components/common/Container";
 import Hero from "@/components/Landing/Hero";
 import Experience from "@/components/Landing/Experience";
@@ -15,6 +14,7 @@ export default function Home() {
       <Projects />
       <About />
       <GithubHeatmap />
+      {/* <Blog /> */}
     </Container>
   );
 }
