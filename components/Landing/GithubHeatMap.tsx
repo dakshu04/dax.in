@@ -23,10 +23,13 @@ export default function GithubHeatmap() {
     return (
         <Container className="mt-20">
             <SectionHeading subHeading="Featured" heading="GitHub Activity" />
+            <div className="mt-5 flex items-center justify-center text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-800 rounded-lg p-4 inset-shadow-sm dark:inset-shadow-zinc-800">
+
             <GitHubCalendar   
                         username={githubConfig.username}
                         // Correctly apply the theme array based on resolvedTheme
-                        theme={resolvedTheme === 'dark' ? { dark: githubConfig.theme.dark } : { light: githubConfig.theme.light }}
+                        theme={githubConfig.theme}
+                        colorScheme={resolvedTheme === 'dark' ? 'dark' : 'light'}
                         blockSize={githubConfig.blockSize}
                         blockMargin={githubConfig.blockMargin}
                         fontSize={githubConfig.fontSize}
@@ -37,7 +40,8 @@ export default function GithubHeatmap() {
                             weekdays: githubConfig.weekdays,
                             totalCount: githubConfig.totalCountLabel 
                         }}
-                    />
+                        />
+                        </div>
         </Container>
     )
 }

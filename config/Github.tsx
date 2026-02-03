@@ -1,14 +1,13 @@
 export const githubConfig = {
     username: 'dakshu04',
-    apiUrl: 'https://github-contributions-api.deno.dev',
     title: 'Github Activity',
     subtitle: 'coding journey over the past few years',
 
      // Chart settings
     blockSize: 11,
-    blockMargin: 2,
-    fontSize: 12,
-    maxLevel: 5,
+    blockMargin: 1,
+    fontSize: 14,
+    maxLevel: 4,
 
     // Month labels
     months: [
