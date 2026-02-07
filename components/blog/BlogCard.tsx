@@ -29,17 +29,17 @@ export function BlogCard({ post }: BlogCardProps) {
   });
 
   return (
-    <Card className="group h-full w-full overflow-hidden border-gray-100 p-0 shadow-none transition-all dark:border-gray-800">
+    <Card className="mt-5 inset-shadow-md inset-shadow-black group h-full w-full overflow-hidden border-gray-100 p-0 shadow-none transition-all dark:border-gray-800">
       <CardHeader className="p-0">
         <div className="relative aspect-video overflow-hidden">
-          <Link href={`/blog/${slug}`}>
+          <Link href={`/blogs/${slug}`}>
             <Image src={image} alt={title} fill className="object-cover" />
           </Link>
         </div>
       </CardHeader>
       <CardContent>
         <div className="space-y-3">
-          <Link href={`/blog/${slug}`}>
+          <Link href={`/blogs/${slug}`}>
             <h3 className="group-hover:text-primary line-clamp-2 text-xl leading-tight font-semibold">
               {title}
             </h3>
@@ -69,7 +69,7 @@ export function BlogCard({ post }: BlogCardProps) {
               <Calender className="size-4" /> {formattedDate}
             </time>
             <Link
-              href={`/blog/${slug}`}
+              href={`/blogs/${slug}`}
               className="text-secondary flex items-center justify-end gap-2 underline-offset-4 hover:underline"
             >
               Read More <ArrowRight className="size-4" />

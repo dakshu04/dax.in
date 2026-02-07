@@ -7,8 +7,12 @@ import { Metadata } from 'next';
 import { Robots } from 'next/dist/lib/metadata/types/metadata-types';
 import { Suspense } from 'react';
 import { BlogPageClient } from './BlogPageClient';
-import { getAllTags, getPublishedBlogPosts } from '@/lib/Blog';
+import { getPublishedBlogPosts } from '@/lib/Blog';
 
+export const metadata = {
+  title: 'Blog | Daksh - Designer Engineer',
+  description: 'Sharing insights on building SaaS, AI tools, and design-led engineering.',
+};
 
 // export const generateMetadata = (): Metadata => {
 //   const metadata = getMetadata('/blog');
@@ -70,7 +74,7 @@ function BlogPageLoading() {
 
 export default function BlogPage() {
   const allPosts = getPublishedBlogPosts();
-  const allTags = getAllTags();
+  const allTags = [""];
 
   return (
     <Suspense fallback={<BlogPageLoading />}>

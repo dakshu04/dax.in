@@ -54,7 +54,7 @@ export function BlogPageClient({
     if (selectedTag === tag) {
       setSelectedTag(null);
       setFilteredPosts(initialPosts);
-      router.replace('/blog');
+      router.replace('/blogs');
     } else {
       setSelectedTag(tag);
       const filtered = getBlogPostsByTagClient(initialPosts, tag);

@@ -2,6 +2,9 @@
 @import 'tw-animate-css';
 
 
+/* Tailwind v4 typography plugin – enables prose classes (editor may show "unknown at rule" without .vscode/settings.json) */
+@plugin "@tailwindcss/typography";
+
 @font-face {
   font-family: 'Hanken Grotesk';
   src: url('/fonts/HankenGrotesk-Variable.ttf') format('truetype');
