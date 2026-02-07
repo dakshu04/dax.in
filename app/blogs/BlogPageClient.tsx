@@ -59,7 +59,7 @@ export function BlogPageClient({
       setSelectedTag(tag);
       const filtered = getBlogPostsByTagClient(initialPosts, tag);
       setFilteredPosts(filtered);
-      router.replace(`/blog?tag=${encodeURIComponent(tag)}`);
+      router.replace(`/blogs?tag=${encodeURIComponent(tag)}`);
     }
   };
 
