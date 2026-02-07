@@ -7,6 +7,7 @@ import ReactLenis from "lenis/react";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/Landing/Footer";
 import localFont from 'next/font/local' 
+import { Analytics } from "@vercel/analytics/next"
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
             >
             <ReactLenis root>
               <Navbar />
+              <Analytics />
                 {children}
               <Footer />
             </ReactLenis>
