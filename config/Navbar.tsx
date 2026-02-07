@@ -16,7 +16,7 @@ export const navbarConfig = {
             href: '/work-experience'
         },
         {
-            label: 'Blog',
+            label: 'Blogs',
             href: '/blogs'
         },
         {
