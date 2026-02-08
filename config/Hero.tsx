@@ -67,17 +67,17 @@ export const heroConfig = {
 
     buttons: [
         {
-            variant: 'outline',
+            variant: 'default',
             text: 'Resume / CV',
             href: '/resume',
             icon: 'CV'
         }, 
-        {
-            variant: 'default',
-            text: 'Get in touch',
-            href: '/contact',
-            icon: 'Chat'
-        }
+        // {
+        //     variant: 'default',
+        //     text: 'Get in touch',
+        //     href: '/contact',
+        //     icon: 'Chat'
+        // }
     ]
 }
 

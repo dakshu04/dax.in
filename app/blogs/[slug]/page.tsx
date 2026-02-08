@@ -73,8 +73,8 @@ export default async function Page({ params }: PageProps) {
 
           {/* Content Section - The "prose" class does the magic */}
           <section className="prose prose-slate dark:prose-invert prose-lg max-w-none prose-headings:tracking-tight prose-a:text-blue-600">
-        <MDXRemote source={post.content} />
-      </section>
+            <MDXRemote source={post.content} />
+          </section>
         </article>
       </div>
     </main>

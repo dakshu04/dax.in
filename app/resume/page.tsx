@@ -1,8 +1,11 @@
 import Container from '@/components/common/Container';
+import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { generateMetadata as getMetadata } from '@/config/Meta';
 import { resumeConfig } from '@/config/Resume';
 import { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export const metadata: Metadata = {
@@ -33,13 +36,23 @@ export default function ResumePage() {
           </p>
         </div>
         <Separator />
-        <div className="mx-auto max-w-2xl">
+        {/* <div className="mx-auto max-w-2xl">
           <iframe
-        src={resumeConfig.url}
+            src={resumeConfig.url}
             className="min-h-screen w-full"
-          ></iframe>
+          ></iframe> */}
+          <div className='flex gap-2 justify-center'>
+            <Image src="/resume/resume_final.jpg" 
+            width="500"
+            height="500" 
+            alt='resume'/>
+              <a href="/resume/resume_pdf.pdf" download="Daksh_Resume.pdf">
+                <Button className='cursor-pointer'>
+                  Download
+                </Button>
+              </a>
+          </div>
         </div>
-      </div>
     </Container>
   );
 }
