@@ -7,11 +7,16 @@ import PostgreSQL from "@/components/technology/PostgreSql"
 import Prisma from "@/components/technology/Prisma"
 import React from "@/components/technology/React"
 import TailwindCss from "@/components/technology/TailwindCss"
-
+import Python from "@/components/technology/Python"
+import FastAPI from "@/components/technology/FastAPI"
+import LLM from "@/components/technology/LLM"
 
 import TypeScript from "@/components/technology/Typescript"
 
 export const skillComponents = {
+    'FastAPI': FastAPI,
+    'LLM': LLM,
+    'Python' : Python,
     'Next.js': NextJs,
     'TypeScript': TypeScript,
     'React': React,
@@ -24,10 +29,25 @@ export const skillComponents = {
 
 export const heroConfig = {
     name: 'Daksh',
-    title: 'A Full Stack Developer',
+    title: 'I Build AI-Powered Products.',
     avtar: '/assets/logo.jpg',
 
     skills : [
+        {
+            name: 'Python',
+            href: 'https://www.python.org/',
+            component: 'Python'
+        },
+        {
+            name: 'FastAPI',
+            href: 'https://fastapi.tiangolo.com/',
+            component: 'FastAPI'
+        },
+        {
+            name: 'LLM',
+            href: 'https://en.wikipedia.org/wiki/Large_language_model',
+            component: 'LLM'
+        },
         {
             name: 'Next.js',
             href: 'https://nextjs.org/',
@@ -62,7 +82,7 @@ export const heroConfig = {
 
     description: {
         template:
-        `I am Daksh, a passionate Full Stack Developer specializing in building dynamic and responsive web applications using modern technologies like {skills:0}, {skills:1}, {skills:2}, {skills:3}, {skills:4} and {skills:5}. With a strong foundation in both front-end and back-end development, I create seamless user experiences and robust server-side solutions. Let us connect and build something amazing together!`
+        `I am Daksh, an AI Product Engineer who turns ambitious ideas into production-ready web applications with polished interfaces, intelligent AI workflows, and scalable full-stack architecture. Using {skills:0}, {skills:1}, {skills:2}, {skills:3}, {skills:4}, {skills:5}, {skills:6}, {skills:7} and {skills:8}. I build products that are thoughtful to use, reliable in production, and designed to create measurable value for businesses. I bring together product thinking, strong engineering fundamentals, and an eye for detail to help teams move from concept to launch with confidence.`
     },
 
     buttons: [
@@ -72,19 +92,14 @@ export const heroConfig = {
             href: '/resume',
             icon: 'CV'
         }, 
-        // {
-        //     variant: 'default',
-        //     text: 'Get in touch',
-        //     href: '/contact',
-        //     icon: 'Chat'
-        // }
+        
     ]
 }
 
 export const socialLinks = [
     {
         name: 'X',
-        href: 'https://x.com/dkshuxcodes',
+        href: 'https://x.com/dkshbuilds',
         icon: <X />
     }, 
     {
