@@ -17,8 +17,8 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Daksh | Software Engineer",
-  description: "Designer & Full-stack Developer building SnapMod",
+  title: "Daksh | AI Product Engineer",
+  description: "AI Product Engineer and developer building thoughtful, production-ready web applications with intelligent workflows and polished interfaces.",
   icons: {
     icon: "/logo.jpg"
   }

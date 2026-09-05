@@ -12,25 +12,29 @@ export interface PageMeta {
 // Base site configuration
 export const siteConfig = {
   name: heroConfig.name,
-  title: 'Portfolio',
-  description: '',
+  title: 'Daksh | AI Product Engineer',
+  description:
+    'AI Product Engineer and developer building thoughtful, production-ready web applications with intelligent workflows and polished interfaces.',
   url: process.env.NEXT_PUBLIC_URL || 'http://localhost:3000',
   ogImage: '/meta/opengraph-image.png',
   author: {
     name: about.name,
-    twitter: '@dakshucodes',
+    twitter: '@dkshbuilds',
     github: 'dakshu04',
     linkedin: 'purohitdaksh',
     email: 'purohitdaksh2003@gmail.com',
   },
   keywords: [
     'portfolio',
+    'AI product engineer',
+    'AI applications',
+    'product engineering',
     'developer',
-    'full-stack',
+    'software developer',
     'react',
     'nextjs',
     'typescript',
-    'web development',
+    'web applications',
     heroConfig.name.toLowerCase(),
   ],
 };
@@ -42,9 +46,10 @@ export const pageMetadata: Record<string, PageMeta> = {
     description: `${about.description} Explore my projects, experience, and technical expertise.`,
     keywords: [
       'portfolio',
+      'AI product engineer',
+      'AI applications',
+      'product engineering',
       'developer',
-      'full-stack',
-      'web development',
       'projects',
     ],
     ogImage: '/meta/hero.png',
