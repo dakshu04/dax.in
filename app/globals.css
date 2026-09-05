@@ -14,7 +14,18 @@
   font-family: 'Hanken Grotesk Italic';
   src: url('/fonts/HankenGrotesk-Italic-Variable.ttf') format('truetype');
 }
+.site-dotted-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
 
+.site-content {
+  position: relative;
+  z-index: 1;
+}
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

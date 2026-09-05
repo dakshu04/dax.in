@@ -8,6 +8,7 @@ import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/Landing/Footer";
 import localFont from 'next/font/local' 
 import { Analytics } from "@vercel/analytics/next"
+import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -41,10 +42,24 @@ export default function RootLayout({
               disableTransitionOnChange
             >
             <ReactLenis root>
+              <div className="site-dotted-background" >
+              <DottedGlowBackground
+                gap={5}
+                radius={1}
+                opacity={0.45}
+                color="rgba(100, 116, 139, 0.3)"
+                darkColor="rgba(203, 213, 225, 0.25)"
+                glowColor="rgba(99, 102, 241, 0.65)"
+                darkGlowColor="rgba(129, 140, 248, 0.75)"
+              />
+            </div>
+              <div className="site-content">
               <Navbar />
+              
               <Analytics />
-                {children}
+              {children}
               <Footer />
+            </div>
             </ReactLenis>
           </ThemeProvider>
         </body>
