@@ -7,7 +7,7 @@ import { ThemeToggle } from "./ThemeSwitch";
 
 export default function Navbar() {
     return (
-        <Container className=" sticky top-0 z-20 rounded-md py-4 backdrop-blur-sm">
+        <Container className="sticky top-5 z-20 rounded-md border border-white/10 bg-background/55 py-4 shadow-sm backdrop-blur-xl backdrop-saturate-150 dark:border-white/5">
             <div className="flex items-center justify-between px-6">
                 <div className="flex items-baseline gap-4">
                     <Link href="/">

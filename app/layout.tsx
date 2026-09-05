@@ -46,7 +46,7 @@ export default function RootLayout({
               <DottedGlowBackground
                 gap={5}
                 radius={1}
-                opacity={0.45}
+                opacity={0.8}
                 color="rgba(100, 116, 139, 0.3)"
                 darkColor="rgba(203, 213, 225, 0.25)"
                 glowColor="rgba(99, 102, 241, 0.65)"
